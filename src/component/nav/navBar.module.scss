@@ -1,0 +1,55 @@
+@import "../../../styles/globals.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 35rem;
+}
+
+.myName {
+  font-size: 3rem;
+}
+
+.menu {
+  font-size: 3rem;
+  position: relative;
+  &:hover {
+    color: $color-hover-green;
+  }
+}
+
+.position {
+  position: relative;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.menuModal {
+  flex-direction: column;
+  display: flex;
+
+  position: absolute;
+}
+
+.modeImg {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.3);
+  }
+}
+
+.navItem {
+  margin: 5rem;
+  font-size: 3rem;
+  &:hover {
+    color: $color-hover-green;
+  }
+}
