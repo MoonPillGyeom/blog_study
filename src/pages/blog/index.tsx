@@ -1,5 +1,5 @@
 const Folder = () => {
-  return <div>Test Hello health</div>;
+  return <div>Test Hello blog</div>;
 };
 
 export default Folder;

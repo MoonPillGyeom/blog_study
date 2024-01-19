@@ -3,10 +3,14 @@ import Link from "next/link";
 import { DARK_MODE, LIGHT_MODE, Navlinks } from "./contens";
 import { KeyboardEventHandler, useState } from "react";
 import Image from "next/image";
+import classNames from "classnames/bind";
+
+const cx = classNames.bind(styles);
 
 const NavBar = () => {
   const [modal, setModal] = useState(false);
   const [mode, SetMode] = useState("light");
+  //불린값으로 하기.
   const handleClick = () => {
     setModal(!modal);
   };
@@ -26,11 +30,12 @@ const NavBar = () => {
     // }
     SetMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
   };
+
   console.log(mode);
   return (
-    <div className={styles.container}>
-      <p className={styles.myName}>pill gyeom</p>
-      <div className={styles.flex}>
+    <div className={cx("container")}>
+      <p className={cx("myName")}>pill gyeom</p>
+      <div className={cx("flex")}>
         <button className={styles.modeImg}>
           {mode === "light" ? (
             <Image
@@ -43,19 +48,19 @@ const NavBar = () => {
             <Image fill src={DARK_MODE} alt="모드설정" />
           )}
         </button>
-        <div className={styles.position}>
+        <div className={cx("position")}>
           <button
-            className={styles.menu}
+            className={cx("menu")}
             onClick={handleClick}
             onKeyDown={handleKeyDown}
           >
             MENU
           </button>
           {modal && (
-            <nav className={styles.menuModal}>
+            <nav className={cx("menuModal")}>
               {Navlinks.map((nav) => (
                 <Link href={nav.link} key={nav.title}>
-                  <span className={styles.navItem}>{nav.title}</span>
+                  <span className={cx("navItem")}>{nav.title}</span>
                 </Link>
               ))}
             </nav>
