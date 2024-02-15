@@ -3,7 +3,7 @@
 .main {
   display: flex;
   justify-content: space-between;
-  padding: 3rem 52rem;
+  padding: 8rem 52rem 0;
 }
 
 .container {
@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 1.5rem;
-  padding: 1rem;
+  padding: 0 5rem 0 0;
 }
 
 .title {
@@ -56,4 +56,8 @@
 
 .profileImg {
   border-radius: 2rem;
+}
+
+.email {
+  font-size: 1.7rem;
 }

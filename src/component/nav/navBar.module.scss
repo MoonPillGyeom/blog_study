@@ -1,5 +1,16 @@
 @import "../../../styles/globals.scss";
 
+.navBar {
+  z-index: 1;
+  box-shadow: 0 0.1rem 0.3rem hsla(0, 0%, 90%);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 7rem;
+}
+
 .container {
   display: flex;
   align-items: center;
